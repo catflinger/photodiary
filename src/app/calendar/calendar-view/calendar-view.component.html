@@ -2,7 +2,10 @@
     <div *ngIf="!diary" class="alert alert-warning">
         Loading
     </div>
-    <div  *ngIf="diary" class="alert alert-success">
-        calendar-view works!
+
+    <div *ngIf="diary">
+        <app-month *ngFor="let month of diary.years[0].months" [month]="month"></app-month>
     </div>
+
+    {{temp}}
 </div>

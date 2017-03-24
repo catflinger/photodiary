@@ -11,6 +11,7 @@ import { CalendarViewComponent } from './calendar/calendar-view/calendar-view.co
 import { AlbumViewComponent } from './album/album-view/album-view.component';
 import { DiaryService } from './shared/diary.service';
 import { ApiService } from './shared/api.service';
+import { MonthComponent } from './calendar/month/month.component';
 
 var routes: Route[] = [
     { path: 'calendar', component: CalendarViewComponent },
@@ -26,7 +27,8 @@ var routes: Route[] = [
     declarations: [
         AppComponent,
         CalendarViewComponent,
-        AlbumViewComponent
+        AlbumViewComponent,
+        MonthComponent
     ],
     imports: [
         BrowserModule,

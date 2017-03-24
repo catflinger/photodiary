@@ -6,7 +6,7 @@ export class DiaryWeek {
     constructor(src: any) {
         if (src) {
             if (src.days && Array.isArray(src.days)) {
-                src.days.forEach(day => this.days.push(day));
+                src.days.forEach(day => this.days.push(new DiaryDay(day)));
             }
         }
     }

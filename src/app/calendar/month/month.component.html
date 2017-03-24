@@ -1,0 +1,8 @@
+<h3>{{month.name}}</h3>
+<table>
+    <tr *ngFor="let week of month.weeks">
+        <td *ngFor="let day of week.days">
+            <img [src]="day.photo.thumb" />
+        </td>
+    </tr>
+</table>

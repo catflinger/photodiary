@@ -6,6 +6,7 @@ export class DiaryPhoto {
     constructor(src?: any) {
         if (src) {
             let path: string = "/assets/dist/";
+
             this.caption = src.caption;
             this.large = path + src.large; 
             this.thumb = path + src.thumb; 

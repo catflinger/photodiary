@@ -12,7 +12,7 @@ export class DiaryMonth {
             this.name = src.name;
 
             if (src.weeks && Array.isArray(src.weeks)) {
-                src.weeks.forEach(week => this.weeks.push(week));
+                src.weeks.forEach(week => this.weeks.push(new DiaryWeek(week)));
             }
         }
     }

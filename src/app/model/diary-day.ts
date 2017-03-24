@@ -18,14 +18,4 @@ export class DiaryDay {
             this.photo = new DiaryPhoto(src.photo);
         }
     }
-    
-    // public static Blank(year: number, month: number, day: number) : DiaryDay {
-    //     let d: DiaryDay = new DiaryDay(null);
-    //     d.day = day;
-    //     d.month = month;
-    //     d.year = year;
-    //     d.caption = "";
-    //     d.photo = new DiaryPhoto();
-    //     return d;
-    // }
 }
