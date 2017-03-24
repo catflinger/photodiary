@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Route } from '@angular/router';
 
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 import { AppComponent } from './app/app.component';
 import { CalendarViewComponent } from './calendar/calendar-view/calendar-view.component';
 import { AlbumViewComponent } from './album/album-view/album-view.component';
@@ -28,7 +30,8 @@ var routes: Route[] = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
