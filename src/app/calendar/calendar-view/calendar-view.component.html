@@ -1,5 +1,8 @@
 <div class="container">
-    <div class="alert alert-success">
+    <div *ngIf="!diary" class="alert alert-warning">
+        Loading
+    </div>
+    <div  *ngIf="diary" class="alert alert-success">
         calendar-view works!
     </div>
 </div>

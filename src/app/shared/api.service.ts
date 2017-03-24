@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable} from 'rxjs';
-import {Http} from '@angular/http'
+import 'rxjs/add/operator/map';
+import {Http} from '@angular/http';
 
 @Injectable()
 export class ApiService {
