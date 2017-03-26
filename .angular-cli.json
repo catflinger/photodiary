@@ -1,45 +1,48 @@
 {
-  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "project": {
-    "name": "photodiary"
-  },
-  "apps": [
-    {
-      "root": "src",
-      "outDir": "dist",
-      "assets": [
-        "assets",
-        "favicon.ico"
-      ],
-      "index": "index.html",
-      "main": "main.ts",
-      "polyfills": "polyfills.ts",
-      "test": "",
-      "tsconfig": "tsconfig.app.json",
-      "prefix": "app",
-      "styles": [
-        "styles.css",
-        "../node_modules/bootstrap/dist/css/bootstrap.css"
-      ],
-      "scripts": [],
-      "environmentSource": "environments/environment.ts",
-      "environments": {
-        "dev": "environments/environment.ts",
-        "prod": "environments/environment.prod.ts"
-      }
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "project": {
+        "name": "photodiary"
+    },
+    "apps": [
+        {
+            "root": "src",
+            "outDir": "dist",
+            "assets": [
+                "assets",
+                "favicon.ico"
+            ],
+            "index": "index.html",
+            "main": "main.ts",
+            "polyfills": "polyfills.ts",
+            "test": "",
+            "tsconfig": "tsconfig.app.json",
+            "prefix": "app",
+            "styles": [
+                "styles.css",
+                "../node_modules/tether/dist/css/tether.css",
+                "../node_modules/bootstrap/dist/css/bootstrap.css"
+            ],
+            "scripts": [
+                "../node_modules/jquery/dist/jquery.js",
+                "../node_modules/tether/dist/js/tether.js",
+                "../node_modules/bootstrap/dist/js/bootstrap.js"
+            ],
+            "environmentSource": "environments/environment.ts",
+            "environments": {
+                "dev": "environments/environment.ts",
+                "prod": "environments/environment.prod.ts"
+            }
+        }
+    ],
+    "e2e": {},
+    "lint": [
+        {
+            "project": "src/tsconfig.app.json"
+        }
+    ],
+    "test": {},
+    "defaults": {
+        "styleExt": "css",
+        "component": {}
     }
-  ],
-  "e2e": {
-  },
-  "lint": [
-    {
-      "project": "src/tsconfig.app.json"
-    }
-  ],
-  "test": {
-  },
-  "defaults": {
-    "styleExt": "css",
-    "component": {}
-  }
 }

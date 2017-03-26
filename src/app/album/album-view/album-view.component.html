@@ -1,3 +1,4 @@
-<p>
-  album-view works!
-</p>
+<div class="container-fullwidth" *ngIf="dc && day">
+            <app-nav [diary]="diary" [dc]="dc"></app-nav>
+            <img [src]="day.photo.large"  />
+</div>

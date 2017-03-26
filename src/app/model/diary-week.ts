@@ -10,4 +10,8 @@ export class DiaryWeek {
             }
         }
     }
+    
+    public getDay(day: number) : DiaryDay {
+        return this.days.find(d => d.day === day);
+    }
 }

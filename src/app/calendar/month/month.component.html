@@ -2,7 +2,13 @@
 <table>
     <tr *ngFor="let week of month.weeks">
         <td *ngFor="let day of week.days">
-            <img [src]="day.photo.thumb" />
+            <a [routerLink]="['/album', day.getYear(), day.getMonth(), day.getDay()]" *ngIf="day.active">
+                <img [src]="day.photo.thumb" />
+            </a>
+
+            <a href="" *ngIf="!day.active">
+                <img [src]="day.photo.thumb" />
+            </a>
         </td>
     </tr>
 </table>
