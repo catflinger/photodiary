@@ -17,7 +17,9 @@ export class DiaryDay {
             this.active = src.active;
     
             if (src.date) {
+                //console.log("date=" + src.date)
                 this.date = new Date(src.date);
+                //console.log("parsed date=" + this.date)
             } else {
                 this.date = new Date(2017, 1, 1);
             } 
@@ -38,6 +40,6 @@ export class DiaryDay {
 
     //this differs from this.day in that non-active days do not have day numbers.  This function returns 1 as a placeholder/default for items that require a day
     public getDay(): number {
-        return this.date.getDay() + 1;
+        return this.date.getDate();
     }
 }

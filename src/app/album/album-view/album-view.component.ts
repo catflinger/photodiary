@@ -17,6 +17,7 @@ import { Context } from '../context';
 export class AlbumViewComponent implements OnInit {
     private diary: Diary;
     private day: DiaryDay;
+    private nextDay: DiaryDay;
     private dc: Context;
 
     constructor(        
@@ -27,7 +28,6 @@ export class AlbumViewComponent implements OnInit {
         //get the diary and select the current day according to the route parameters
         route.params
             .map(params => {
-                console.log("map function called " + JSON.stringify(params));
                 let year: number = +params['year'];
                 let month: number = +params['month'];
                 let day: number = +params['day'];
@@ -38,12 +38,16 @@ export class AlbumViewComponent implements OnInit {
             this.diaryService.getDiary().subscribe(d => {
                 this.diary = d;
                 this.day = d.getDay(this.dc.year, this.dc.month, this.dc.day);
-                //console.log("got day " + JSON.stringify(this.day));
+                this.nextDay = d.nextDay(this.day);
             });
         });
      }
 
     ngOnInit() {
+    }
+
+    public nextPhoto(): void {
+
     }
 
 }

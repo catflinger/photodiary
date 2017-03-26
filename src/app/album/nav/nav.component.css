@@ -1,3 +1,17 @@
-.deadLink {
-    cursor: none
+.dead-link {
+    cursor: none;
+    color:grey;
+}
+
+.nv {
+    margin: 2px;
+    display: inline-block;
+}
+
+.nv-active {
+    color: white;
+}
+
+.nv a {
+    color: grey;
 }
