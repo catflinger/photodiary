@@ -1,6 +1,6 @@
 <div *ngIf="diary && dc">
 
-    <nav class="navbar navbar-inverse bg-inverse navbar-toggleable-md" *ngIf="diary && dc">
+    <nav class="navbar navbar-inverse bg-inverse navbar-toggleable-sm" *ngIf="diary && dc">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -11,9 +11,9 @@
 
             <ul class="navbar-nav mr-auto">
 
-                <li *ngFor="let month of diary.getYear(dc.year).months" class="nav-item" [ngClass]="{active: (dc.month === month.month), disabled: !month.hasPhotos}">
-                    <a class="nav-link" *ngIf="month.hasPhotos" [routerLink]="['/album', dc.year, month.month, 1]">{{month.name}}</a>
-                    <!--<a class="nav-link" *ngIf="!month.hasPhotos">{{month.name}}</a>-->
+                <li *ngFor="let month of diary.getYear(dc.year).months" class="nav-item" [ngClass]="{active: (dc.month === month.month), disabled: !month.hasContent}">
+                    <a class="nav-link" *ngIf="month.hasContent" [routerLink]="['/album', dc.year, month.month, 1]">{{month.name}}</a>
+                    <!--<a class="nav-link" *ngIf="!month.hasContent">{{month.name}}</a>-->
                 </li>
             </ul>
         </div>
@@ -22,7 +22,7 @@
 
     <div class="container-fluid bg-inverse">
             <div class="nv" *ngFor="let day of diary.getYear(dc.year).getMonth(dc.month).getDays()">
-                <a *ngIf="day.hasPhoto" [routerLink]="['/album', dc.year, dc.month, day.day]">
+                <a *ngIf="day.hasContent" [routerLink]="['/album', dc.year, dc.month, day.day]">
                     <span  [ngClass]="{'nv-active': (dc.day === day.day)}">{{day.day}}</span>
                 </a>
               

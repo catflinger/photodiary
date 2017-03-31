@@ -38,7 +38,7 @@ var routes: Route[] = [
         BrowserModule,
         FormsModule,
         HttpModule,
-        RouterModule.forRoot(routes),
+        RouterModule.forRoot(routes, { useHash: true }),
         //NgbModule.forRoot()
     ],
     providers: [

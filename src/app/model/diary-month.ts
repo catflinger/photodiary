@@ -5,7 +5,7 @@ export class DiaryMonth {
     public month: number;
     public name: string;
     public weeks: DiaryWeek[] = [];
-    public hasPhotos: boolean;
+    public hasContent: boolean;
 
     constructor(src: any) {
         if (src) {
@@ -17,7 +17,7 @@ export class DiaryMonth {
             }
             
             //TO DO: fix this, read from src
-            this.hasPhotos = true;
+            this.hasContent = true;
         }
     }
 

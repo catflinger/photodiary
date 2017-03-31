@@ -4,7 +4,7 @@ export class DiaryDay {
     public day: number;     //day of month, eg 3
     public date: Date;      //date this day represents eg 3rd Jan 2017
     public name: string;    //name of day, eg Monday
-    public hasPhoto: boolean;   //true if there is a non-blank photo for this day
+    public hasContent: boolean;   //true if there is a non-blank photo for this day
     public active: boolean; //false if this date lies outside the containing month
                             //eg last day of previous month but still in the same 
                             //week as other days in this month
@@ -25,7 +25,7 @@ export class DiaryDay {
             } 
                
             //TO DO: fix this!  make photo null in src and add blanks here
-            this.hasPhoto = (src.photo && src.photo.large != 'large/blank.jpg');
+            this.hasContent = src.hasContent;
             this.photo = new DiaryPhoto(src.photo);
         }
     }

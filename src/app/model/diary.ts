@@ -59,7 +59,7 @@ export class Diary {
         while (tomorrow.getMonth() === today.getMonth())  {
             tomorrow.setDate(tomorrow.getDate() + 1);
             let day = this.getDayByDate(tomorrow);
-            if (day.active && day.hasPhoto) {
+            if (day && day.active && day.hasContent) {
                 result = day;
                 break;
             }

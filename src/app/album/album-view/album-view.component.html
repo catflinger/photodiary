@@ -1,11 +1,11 @@
+<div style="height: 100%; background-color: black;" class="container-fullwidth bg-inverse" *ngIf="dc && day">
 
     <app-nav [diary]="diary" [dc]="dc"></app-nav>
 
-<div class="container-fullwidth bg-inverse" *ngIf="dc && day">
 
-            <img *ngIf="!nextDay" [src]="day.photo.large" class="photo img-responsive" />
+    <img *ngIf="!nextDay" [src]="day.photo.large" class="photo img-responsive" />
 
-            <a *ngIf="nextDay" [routerLink]="['/album', nextDay.getYear(), nextDay.getMonth(), nextDay.getDay()]">
-                <img [src]="day.photo.large" class="photo" />
-            </a>
+    <a *ngIf="nextDay" [routerLink]="['/album', nextDay.getYear(), nextDay.getMonth(), nextDay.getDay()]">
+        <img [src]="day.photo.large" class="photo" />
+    </a>
 </div>
