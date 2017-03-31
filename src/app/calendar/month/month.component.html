@@ -1,9 +1,13 @@
 <h3>{{month.name}}</h3>
 <table>
+    <tr>
+        <th *ngFor="let name of getDayNames()">{{name}}</th>
+    </tr>
     <tr *ngFor="let week of month.weeks">
         <td *ngFor="let day of week.days">
             <a [routerLink]="['/album', day.getYear(), day.getMonth(), day.getDay()]" *ngIf="day.active">
                 <img [src]="day.photo.thumb" />
+                <div class="dayCaption">{{day.day}}</div>
             </a>
 
             <a href="" *ngIf="!day.active">

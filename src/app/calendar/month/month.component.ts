@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-
 import { DiaryMonth } from '../../model/diary-month';
 
 @Component({
@@ -15,4 +14,13 @@ export class MonthComponent implements OnInit {
     ngOnInit() {
     }
 
+    getDayNames(): string[] {
+        let result: string[] = [];
+        
+        for(let n=0; n < 7; n++) {
+            result.push(this.month.weeks[0].days[n].name);
+        } 
+
+        return result;
+    }
 }
