@@ -1,9 +1,15 @@
 <div class="container">
+
     <div *ngIf="!diary" class="alert alert-warning">
         Loading
     </div>
 
     <div *ngIf="diary">
+
+        <div class="starter-template">
+            <h1>Mary's photo diary 2017</h1>
+        </div>
+      
         <app-month *ngFor="let month of diary.years[0].months" [month]="month"></app-month>
     </div>
 </div>
