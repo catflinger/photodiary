@@ -8,9 +8,9 @@ export class ApiService {
     private observable: Observable<any>;
 
     constructor(private http: Http) { 
-        this.observable = this.http.get('/assets/dist/diary.json')
+        var version = new Date().getSeconds();
+        this.observable = this.http.get('/assets/dist/diary.json?x=' + version)
             .map(res => res.json());
-        
     }
 
     public getObservable(): Observable<any> {
