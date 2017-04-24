@@ -25,6 +25,10 @@ var routes: Route[] = [
         redirectTo: '/calendar',
         pathMatch: 'full'
     },
+    {
+        path: '**',
+        redirectTo: '/calendar'
+    },
 ];
 
 @NgModule({
