@@ -9,6 +9,7 @@ import { RouterModule, Route } from '@angular/router';
 import { AppComponent } from './app/app.component';
 import { DiaryService } from './shared/diary.service';
 import { ApiService } from './shared/api.service';
+import { Utils } from './shared/utils';
 
 import { CalendarViewComponent } from './calendar/calendar-view/calendar-view.component';
 import { MonthComponent } from './calendar/month/month.component';
@@ -43,7 +44,8 @@ var routes: Route[] = [
     ],
     providers: [
         DiaryService,
-        ApiService
+        ApiService,
+        Utils
     ],
     bootstrap: [
         AppComponent

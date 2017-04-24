@@ -5,8 +5,8 @@ import { Diary } from '../../model/diary';
 import { DiaryMonth } from '../../model/diary-month';
 import { DiaryDay } from '../../model/diary-day';
 import { DiaryService } from '../../shared/diary.service';
-//import { ContextService } from '../context.service';
 import { Context } from '../context';
+import { Utils } from '../../shared/utils';
 
 @Component({
     selector: 'app-album-view',
@@ -22,8 +22,8 @@ export class AlbumViewComponent implements OnInit {
 
     constructor(        
         private route: ActivatedRoute,
-        //private contextService: ContextService, 
-        private diaryService: DiaryService) {
+        private diaryService: DiaryService,
+        private utils: Utils) {
 
         //get the diary and select the current day according to the route parameters
         route.params
@@ -40,6 +40,10 @@ export class AlbumViewComponent implements OnInit {
                 this.day = d.getDay(this.dc.year, this.dc.month, this.dc.day);
                 this.nextDay = d.nextDay(this.day);
             });
+
+            //remove selected text caused by some users double-clicking on links
+            //rather than single-clicking
+            utils.clearSelection();
         });
      }
 
